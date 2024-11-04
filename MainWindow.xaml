@@ -1,0 +1,25 @@
+﻿<Window x:Class="Histogram.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Histogram i Binaryzacja" Height="600" Width="800">
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
+            <Button Content="Wczytaj Obraz" Click="LoadImage_Click" Width="150"/>
+            <Image Name="LoadedImage" Width="300" Height="300" Margin="10"/>
+            <Button Content="Normalizacja Histogramu" Click="NormalizeHistogram_Click" Width="200" Margin="10"/>
+            <Button Content="Equalizacja Histogramu" Click="EqualizeHistogram_Click" Width="200" Margin="10"/>
+
+            <TextBlock Text="Binaryzacja" FontWeight="Bold" FontSize="16" Margin="10"/>
+            <TextBlock Text="Podaj próg binaryzacji:" Margin="5"/>
+            <TextBox Name="ThresholdInput" Width="100" Margin="10"/>
+            <Button Content="Zastosuj Ręczny Próg Binaryzacji" Click="BinaryThreshold_Click" Width="200" Margin="10"/>
+
+            <TextBlock Text="Procent czarnych pikseli:" Margin="5"/>
+            <TextBox Name="PercentBlackInput" Width="100" Margin="10"/>
+
+            <Button Content="Procentowa Selekcja Czarnego" Click="PercentBlackSelection_Click" Width="200" Margin="10"/>
+            <Button Content="Iteracyjna Selekcja Średniej" Click="MeanIterativeSelection_Click" Width="200" Margin="10"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
